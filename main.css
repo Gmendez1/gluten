@@ -7,8 +7,10 @@
         }
     
     body{
-    background-color: lightsteelblue;
     font-family: 'Gluten';
+}
+.hero{
+    background-image: url("images/gluten.svg");
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
