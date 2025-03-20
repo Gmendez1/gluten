@@ -11,18 +11,25 @@
 }
 .hero{
     background-image: url("images/gluten.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* height:800px; */
 }
 /* how the page wrapper will appear on mobile */
 .page-wrapper{
-    width: min(100% - 3rem, 80ch);
+    width: min(100% - 3rem, 120ch);
     margin-inline: auto;
 }
-/* how the page wrapper appears on desktop */
+#alphabet {
+    grid-area: a; /* Keeps the grid layout intact */
+    background-color: #DCF0EC; }
 
+/* how the page wrapper appears on desktop */
 @media only screen and (min-width:800px){
 .page-wrapper{
 display: grid;
 grid-gap: 25px;
+padding-top:40px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
@@ -30,28 +37,52 @@ grid-template-areas:
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
+font-size: 20px;
+
 }
 
-.variations{
+#variations{
 grid-area: v;
 }
 
-.alphabet {
-grid-area: a;
+#alphabet {
+grid-area: a; /* Keeps the grid layout intact */
+background-color: #DCF0EC; /* Sets the background color to pink */
+padding: 20px; /* Adds padding inside the pink area */
+border-radius: 10px; /* Optional: Adds rounded corners */
+color: black; /* Ensures text is readable (adjust as needed) */
+width: 100%; /* Makes the section span the full width */
+    margin: 0; /* Removes any default margins */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 }
 /* CSS for the footer */
 footer{
-    background-color: gray;
+    background-color: #DCF0EC;
+    width: 100%; /* Makes the footer span the full width of the page */
+    text-align: left; /* Centers the text inside the footer */
+    padding: 1em 0; /* Adds some vertical padding */
+    padding-left: 25px;
+    background-color: #DCF0EC; /* Optional: Keeps the background color */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+/* typographic styling */
 
+.alphabet-set{
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+   line-height: 10px;
+    font-variation-settings: "wght" 100, "slnt" 0;
+}
 /* variable font animation */
 h3{
     font-weight:20; 
     text-align: center;
-    font-size: 5em;
+    padding:300px;
+    font-size: 7em;
     animation: weightChange 7s infinite;
 }
 
@@ -62,6 +93,38 @@ h3{
     50%{font-variation-settings: "wght" 900, "slnt" -13;
     }
     
+}
+/* animations for the variation section */
+.weight{
+    animation: weightVariation 5s infinite;
+
+}
+
+@keyframes weightVariation {
+    0%, 100%{
+        font-variation-settings: "wght" 100, "slnt" 0;
+    }
+    50%{font-variation-settings: "wght" 900, "slnt" 0;
+    }
+    
+}
+.slant{
+    animation: slantVariation 5s infinite;
+
+}
+
+@keyframes slantVariation {
+    0%, 100%{
+        font-variation-settings: "wght" 300, "slnt" 13;
+    }
+    50%{font-variation-settings: "wght" 300, "slnt" -13;
+    }
+    
+}
+
+h4{
+    font-size: 40px;
+    margin:15px;
 }
 /* variable font that changes on hover */
 .variable-font{
@@ -89,3 +152,22 @@ h3{
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
 }
 
+/* download button */
+.download-section{
+    height: 150px;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers the button vertically */
+}
+.download {
+    padding: 20px 20px; 
+    display: inline-block; /* Ensures the link behaves like a block element */
+    text-align: center; /* Centers the text inside the link */
+    margin: auto; /* Centers the link horizontally and vertically */
+    background-color: aqua;
+    width:150px;
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
