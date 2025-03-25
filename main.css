@@ -63,10 +63,10 @@ footer{
     background-color: #DCF0EC;
     width: 100%; /* Makes the footer span the full width of the page */
     text-align: left; /* Centers the text inside the footer */
-    padding: 1em 0; /* Adds some vertical padding */
+    padding: 10px; /* Adds some vertical padding */
     padding-left: 25px;
-    background-color: #DCF0EC; /* Optional: Keeps the background color */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 1.5em;
 }
 /* typographic styling */
 
@@ -74,7 +74,7 @@ footer{
     font-size: 50px;
     font-weight: 100;
     text-align: center;
-   line-height: 10px;
+    line-height: 10px;
     font-variation-settings: "wght" 100, "slnt" 0;
 }
 /* variable font animation */
@@ -164,9 +164,11 @@ h4{
     display: inline-block; /* Ensures the link behaves like a block element */
     text-align: center; /* Centers the text inside the link */
     margin: auto; /* Centers the link horizontally and vertically */
-    background-color: aqua;
+    background-color: #A19DCD;
     width:150px;
-    border-radius: 10px;
+    border-radius: 5px;
+    color: white
+    
 }
 a{
     text-decoration: none;
